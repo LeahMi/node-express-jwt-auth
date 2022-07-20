@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeahMi/Login-Signup-web.git "
+    "url": "git+https://github.com/LeahMi/node-express-jwt-auth.git "
   },
   "keywords": [],
   "author": "",

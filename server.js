@@ -17,7 +17,9 @@ app.set('view engine', 'ejs');
 // database connection
 const dbURI = 'mongodb+srv://Dvora:Dd123456@cluster0.5xgjw.mongodb.net/node-auth';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  }))
   .catch((err) => console.log(err));
 
 // routes
